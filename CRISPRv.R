@@ -20,7 +20,7 @@ Phenotype_common<-Phenotype[Phenotype$DepMap_ID %in% commonIDs2, ]
 
 # Select data for association analysis
 # The code can run multiple phenotypic associations simultaneously by adding more columns with phenotype data
-a<-as.data.frame(Phenotype_common[,2])
+a<-as.data.frame(Phenotype_common[,5]) # Uses Log10CellVolume column as an example
 b<-CERES_common[,2:ncol(CERES_common)]
 
 # t statistic value for linear model (significance and directionality of association)
